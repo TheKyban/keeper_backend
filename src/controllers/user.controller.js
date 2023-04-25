@@ -16,7 +16,6 @@ export const CreateNewUser = async (req, res) => {
          */
 
         const { fName, lName, email, password } = req.body
-        console.log(req.body)
 
         /**
          * Checking user already exist or not
@@ -58,7 +57,6 @@ export const Login = async (req, res) => {
          * Getting data from request body
          */
         const { email, password } = req.body;
-        console.log(req.body)
 
         /**
          * Checking user exist or not
@@ -79,7 +77,6 @@ export const Login = async (req, res) => {
          */
         const isMatch = await bcrypt.compare(password,isExist.password)
 
-        console.log(isExist, isMatch)
 
         /**
          * JWT token
